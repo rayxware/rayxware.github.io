@@ -9,7 +9,76 @@
     
     <title>rayXware</title>
 <style>
+    
+    /* About Button Styling */
+.about-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 20px;
+    background: transparent;
+    color: #c3a469;
+    border: 1px solid #c3a469;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #c3a469;
+    color: #080a0c;
+}
+
+/* Modal Styling */
+#profile-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(8, 10, 12, 0.95);
+    z-index: 1000;
+    padding-top: 100px;
+}
+
+.profile-content {
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid #9e824f;
+    padding: 30px;
+    background: #0b0e14;
+}
+
+.close-btn {
+    display: block;
+    margin-top: 20px;
+    color: #c3a469;
+    text-decoration: underline;
+    cursor: pointer;
+}
+    
     body { 
+
+        <button class="about-btn" onclick="toggleProfile()">About</button>
+
+<div id="profile-overlay">
+    <div class="profile-content">
+        <h2 style="color: #c3a469;">Looi Wai Mun</h2>
+        <p style="text-align: left; line-height: 1.6;">
+            I am a specialized watch technician and shop owner based in Sungai Siput. 
+            When I'm not working with precision timepieces, I focus on building robust network environments and managing server infrastructure using Synology and OpenWrt. 
+            I enjoy developing custom hardware solutions and optimizing high-resolution audio systems.
+        </p>
+        <span class="close-btn" onclick="toggleProfile()">Close</span>
+    </div>
+</div>
+
+<script>
+    function toggleProfile() {
+        const overlay = document.getElementById('profile-overlay');
+        overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+        
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
         text-align: center; 
         /* Darker background to match the moody atmosphere of logo.jpg */
