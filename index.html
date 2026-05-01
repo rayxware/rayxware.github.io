@@ -8,30 +8,45 @@
     <link rel="icon" type="image/png" href="logo.png">
     
     <title>rayXware</title>
-    <style>
-        body { 
-            font-family: sans-serif; 
-            text-align: center; 
-            background: #0b0e14; 
-            color: white; 
-            padding-top: 50px; 
-            margin: 0; /* Removes default browser margins */
-        }
-        img { 
-            border-radius: 50%; 
-            width: 200px; 
-            max-width: 80%; /* Ensures the logo doesn't overflow small screens */
-            height: auto;
-            border: 3px solid #00d4ff; 
-        }
-        h1 { 
-            color: #00d4ff; 
-            padding: 0 20px; /* Adds space so text doesn't touch screen edges */
-        }
-        p {
-            padding: 0 20px;
-        }
-    </style>
+<style>
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        text-align: center; 
+        /* Darker background to match the moody atmosphere of logo.jpg */
+        background: #080a0c; 
+        color: white; 
+        padding-top: 50px; 
+        margin: 0;
+    }
+    
+    img { 
+        border-radius: 50%; 
+        width: 200px; 
+        max-width: 80%;
+        height: auto;
+        /* Replaced cyan with a subtle gold border */
+        border: 3px solid #c3a469; 
+        /* Optional: adds a soft glow similar to the lighting in the image */
+        box-shadow: 0 0 20px rgba(195, 164, 105, 0.2);
+    }
+
+    h1 { 
+        /* Gold Gradient Text */
+        background: linear-gradient(to bottom, #e3cf92 0%, #c3a469 50%, #9e824f 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 0 20px; 
+    }
+
+    p {
+        padding: 0 20px;
+        color: #9e824f; /* Muted gold for the subtitle */
+        letter-spacing: 1px;
+    }
+</style>
 </head>
 <body>
     <img src="logo.png" alt="rayXware logo">
