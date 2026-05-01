@@ -1,125 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- The meta tag below ensures the site scales correctly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- This line adds the logo to your browser tab -->
     <link rel="icon" type="image/png" href="logo.png">
-    
     <title>rayXware</title>
-<style>
-    
-    /* About Button Styling */
-.about-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 8px 20px;
-    background: transparent;
-    color: #c3a469;
-    border: 1px solid #c3a469;
-    cursor: pointer;
-    font-family: inherit;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
+    <style>
+        /* --- CSS STYLES --- */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background: #080a0c; 
+            color: white; 
+            padding-top: 50px; 
+            margin: 0;
+        }
 
-.about-btn:hover {
-    background: #c3a469;
-    color: #080a0c;
-}
+        .about-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 8px 20px;
+            background: transparent;
+            color: #c3a469;
+            border: 1px solid #c3a469;
+            cursor: pointer;
+            font-family: inherit;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
 
-/* Modal Styling */
-#profile-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(8, 10, 12, 0.95);
-    z-index: 1000;
-    padding-top: 100px;
-}
+        .about-btn:hover {
+            background: #c3a469;
+            color: #080a0c;
+        }
 
-.profile-content {
-    max-width: 500px;
-    margin: auto;
-    border: 1px solid #9e824f;
-    padding: 30px;
-    background: #0b0e14;
-}
+        #profile-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(8, 10, 12, 0.95);
+            z-index: 1000;
+            padding-top: 100px;
+        }
 
-.close-btn {
-    display: block;
-    margin-top: 20px;
-    color: #c3a469;
-    text-decoration: underline;
-    cursor: pointer;
-}
-    
-    body { 
+        .profile-content {
+            max-width: 500px;
+            margin: auto;
+            border: 1px solid #9e824f;
+            padding: 30px;
+            background: #0b0e14;
+        }
 
-        <button class="about-btn" onclick="toggleProfile()">About</button>
+        .close-btn {
+            display: block;
+            margin-top: 20px;
+            color: #c3a469;
+            text-decoration: underline;
+            cursor: pointer;
+        }
 
-<div id="profile-overlay">
-    <div class="profile-content">
-        <h2 style="color: #c3a469;">Looi Wai Mun</h2>
-        <p style="text-align: left; line-height: 1.6;">
-            I am a specialized watch technician and shop owner based in Sungai Siput. 
-            When I'm not working with precision timepieces, I focus on building robust network environments and managing server infrastructure using Synology and OpenWrt. 
-            I enjoy developing custom hardware solutions and optimizing high-resolution audio systems.
-        </p>
-        <span class="close-btn" onclick="toggleProfile()">Close</span>
-    </div>
-</div>
+        img { 
+            border-radius: 50%; 
+            width: 200px; 
+            max-width: 80%;
+            height: auto;
+            border: 3px solid #c3a469; 
+            box-shadow: 0 0 20px rgba(195, 164, 105, 0.2);
+        }
 
-<script>
-    function toggleProfile() {
-        const overlay = document.getElementById('profile-overlay');
-        overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
-    }
-</script>
-        
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        text-align: center; 
-        /* Darker background to match the moody atmosphere of logo.jpg */
-        background: #080a0c; 
-        color: white; 
-        padding-top: 50px; 
-        margin: 0;
-    }
-    
-    img { 
-        border-radius: 50%; 
-        width: 200px; 
-        max-width: 80%;
-        height: auto;
-        /* Subtle gold border */
-        border: 3px solid #c3a469; 
-        /* Optional: adds a soft glow similar to the lighting in the image */
-        box-shadow: 0 0 20px rgba(195, 164, 105, 0.2);
-    }
+        h1 { 
+            background: linear-gradient(to bottom, #e3cf92 0%, #c3a469 50%, #9e824f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 0 20px; 
+        }
 
-    h1 { 
-        /* Gold Gradient Text */
-        background: linear-gradient(to bottom, #e3cf92 0%, #c3a469 50%, #9e824f 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        /*text-transform: uppercase;*/ /* Uncomment to use uppercase */
-        letter-spacing: 2px;
-        padding: 0 20px; 
-    }
-
-    p {
-        padding: 0 20px;
-        color: #9e824f; /* Muted gold for the subtitle */
-        letter-spacing: 1px;
-    }
-</style>
+        .subtitle {
+            padding: 0 20px;
+            color: #9e824f;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- About Button -->
+    <button class="about-btn" onclick="toggleProfile()">About</button>
+
+    <!-- Profile Overlay -->
+    <div id="profile-overlay">
+        <div class="profile-content">
+            <h2 style="color: #c3a469;">Looi Wai Mun</h2>
+            <p style="text-align: left; line-height: 1.6;">
+                I am a specialized watch technician and shop owner. 
+                When I'm not working with precision timepieces, I focus on building robust network environments using OpenWrt and managing server infrastructure with Synology. 
+                I also enjoy developing custom hardware solutions and optimizing high-resolution audio systems.
+            </p>
+            <span class="close-btn" onclick="toggleProfile()">Close</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <img src="logo.png" alt="rayXware logo">
     <h1>Welcome to rayXware</h1>
-    <p>Site is under construction</p>
+    <p class="subtitle">Site is under construction</p>
+
+    <script>
+        function toggleProfile() {
+            const overlay = document.getElementById('profile-overlay');
+            if (overlay.style.display === 'block') {
+                overlay.style.display = 'none';
+            } else {
+                overlay.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
 </html>
