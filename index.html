@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- The meta tag below ensures the site scales correctly on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>rayXware</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background: #0b0e14; color: white; padding-top: 50px; }
-        img { border-radius: 50%; width: 200px; border: 3px solid #00d4ff; }
-        h1 { color: #00d4ff; }
+        body { 
+            font-family: sans-serif; 
+            text-align: center; 
+            background: #0b0e14; 
+            color: white; 
+            padding-top: 50px; 
+            margin: 0; /* Removes default browser margins */
+        }
+        img { 
+            border-radius: 50%; 
+            width: 200px; 
+            max-width: 80%; /* Ensures the logo doesn't overflow small screens */
+            height: auto;
+            border: 3px solid #00d4ff; 
+        }
+        h1 { 
+            color: #00d4ff; 
+            padding: 0 20px; /* Adds space so text doesn't touch screen edges */
+        }
+        p {
+            padding: 0 20px;
+        }
     </style>
 </head>
 <body>
-    <img src="logo.png" alt="rayXware Logo">
+    <img src="logo.png" alt="rayXware logo">
     <h1>Welcome to rayXware</h1>
     <p>Site is under construction</p>
 </body>
