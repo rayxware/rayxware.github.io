@@ -135,13 +135,16 @@
         <div class="instructions">
             <div class="inst-group">
                 <span class="inst-title">Hardware:</span>
-                M5Stack Cardputer + RF Receiver (330/433Mhz) + SMC5326P Remote<br>
-                [VCC → 5V (Red), GND → G (Black), DATA → G2 (Yellow)]
+                M5Stack Cardputer, Grove2Dupont Conversion Cable, 6 Jumper Wire (M-M or M-F)<br>
+                330Mhz and 433Mhz Superheterodyne RF Receiver, Autogate Remote with IC SMC5326P<br>
+                [VCC Pin to 5V (Red), GND Pin to G (Black), 2 DATA Pin {Use Either 1} to G2 (Yellow)]
             </div>
             <div class="inst-group">
                 <span class="inst-title">Software:</span>
-                Bruce v1.14: RF → Config → RX Pin → Grove Y (G2)<br>
-                Scan/Copy → Record the 25-bit binary string.
+                M5Launcher v2.6.8<br>
+                Bruce v1.14 (Required MicroSD Card with FAT32 to Store Data)<br>
+                [Navigate and Change the RF - Config - RF RX Pin -> Grove Y (G2 - Yellow)]<br>
+                [Navigate the Scan/copy to Start, Record the Binary - 25 Numbers]
             </div>
         </div>
     </div>
